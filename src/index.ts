@@ -6,8 +6,17 @@ export {
   HaircutStyle, 
   OriginKind, 
   SexKind, 
-  SpecieKind 
+  SpecieKind,
+  Sexes,
+  Origins,
+  Eyes,
+  HairColors,
+  HairCuts,
+  Complexions,
+  Species,
+  Ages
 } from "./enumerations";
+export { Aspect } from "./aspect";
 
 function hello(name: string = "Ivan"): string {
     return `Hello, ${name}`;

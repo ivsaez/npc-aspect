@@ -60,5 +60,8 @@
     "dist",
     "package.json",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "role-methods": "^1.0.2"
+  }
 }
