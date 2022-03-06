@@ -17,9 +17,4 @@ export {
   Ages
 } from "./enumerations";
 export { Aspect } from "./aspect";
-
-function hello(name: string = "Ivan"): string {
-    return `Hello, ${name}`;
-  }
-  
-  export default hello;
+export { Likes } from "./likes";

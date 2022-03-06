@@ -146,3 +146,11 @@ export const Ages: AgeKind[] = [
     AgeKind.Teenager,
     AgeKind.Young
 ];
+
+export function getAgeKind(age: number): AgeKind{
+    if(age >= 12 && age <= 18) return AgeKind.Teenager;
+    else if(age >= 19 && age <= 35) return AgeKind.Young;
+    else if(age >= 36 && age <= 65) return AgeKind.Midage;
+    else if(age >= 66) return AgeKind.Old;
+    else return AgeKind.Kid;
+}

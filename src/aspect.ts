@@ -213,6 +213,18 @@ export class Aspect{
             this.getRandomAgeByAgeKind(age));
     }
 
+    copy(): Aspect{
+        return new Aspect(
+            this._sex, 
+            this._origin, 
+            this._eye, this._hair, 
+            this._haircut, 
+            this._complexion, 
+            this._specie, 
+            this._height, 
+            this._age);
+    }
+
     private static getRandomAgeByAgeKind(age: AgeKind): number{
         switch(age){
             case AgeKind.Kid:

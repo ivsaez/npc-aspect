@@ -203,4 +203,29 @@ describe("Aspect should", () => {
     expect(aspect.specie).toBe(SpecieKind.Goblin);
     expect(aspect.sex).toBe(SexKind.Androgynous);
   });
+
+  it("copy an aspect", () => {
+    let aspect = new Aspect(
+        SexKind.Female,
+        OriginKind.Arabic,
+        EyeColor.Brown,
+        HairColor.Blue,
+        HaircutStyle.Bald,
+        ComplexionKind.Strongman,
+        SpecieKind.Dwarf,
+        140,
+        50);
+    
+    let copy = aspect.copy();
+
+    expect(copy.sex).toBe(SexKind.Female);
+    expect(copy.origin).toBe(OriginKind.Arabic);
+    expect(copy.eye).toBe(EyeColor.Brown);
+    expect(copy.hair).toBe(HairColor.Blue);
+    expect(copy.haircut).toBe(HaircutStyle.Bald);
+    expect(copy.complexion).toBe(ComplexionKind.Strongman);
+    expect(copy.specie).toBe(SpecieKind.Dwarf);
+    expect(copy.height).toBe(140);
+    expect(copy.age).toBe(50);
+  });
 });
