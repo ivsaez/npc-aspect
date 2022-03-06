@@ -19,15 +19,15 @@ import {
 import { random, randomFromList } from "role-methods";
 
 export class Aspect{
-    _sex: SexKind;
-    _origin: OriginKind;
-    _eye: EyeColor;
-    _hair: HairColor;
-    _haircut: HaircutStyle;
-    _complexion: ComplexionKind;
-    _specie: SpecieKind;
-    _height: number;
-    _age: number;
+    private _sex: SexKind;
+    private _origin: OriginKind;
+    private _eye: EyeColor;
+    private _hair: HairColor;
+    private _haircut: HaircutStyle;
+    private _complexion: ComplexionKind;
+    private _specie: SpecieKind;
+    private _height: number;
+    private _age: number;
 
     constructor(
         sex: SexKind = SexKind.Male,
@@ -216,15 +216,15 @@ export class Aspect{
     private static getRandomAgeByAgeKind(age: AgeKind): number{
         switch(age){
             case AgeKind.Kid:
-                return 5 + random(7);
+                return 5 + random(6);
             case AgeKind.Teenager:
-                return 12 + random(7);
+                return 12 + random(6);
             case AgeKind.Young:
-                return 19 + random(17);
+                return 19 + random(16);
             case AgeKind.Midage:
-                return 36 + random(30);
+                return 36 + random(29);
             case AgeKind.Old:
-                return 66 + random(35);
+                return 66 + random(34);
         }
     }
 
