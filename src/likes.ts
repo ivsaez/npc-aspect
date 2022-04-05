@@ -164,4 +164,25 @@ export class Likes{
             map.set(key, MinLike);
         }
     }
+
+    copy(): Likes{
+        let copy = new Likes();
+
+        Likes.copyMap(this._sexMap, copy._sexMap);
+        Likes.copyMap(this._originMap, copy._originMap);
+        Likes.copyMap(this._eyeColorMap, copy._eyeColorMap);
+        Likes.copyMap(this._hairColorMap, copy._hairColorMap);
+        Likes.copyMap(this._hairCutMap, copy._hairCutMap);
+        Likes.copyMap(this._complexionMap, copy._complexionMap);
+        Likes.copyMap(this._specieMap, copy._specieMap);
+        Likes.copyMap(this._ageMap, copy._ageMap);
+
+        return copy;
+    }
+
+    private static copyMap<T>(origin: Map<T, number>, destiny: Map<T, number>): void{
+        for(let key of origin.keys()){
+            destiny.set(key, origin.get(key));
+        }
+    }
 }

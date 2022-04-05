@@ -27,4 +27,23 @@ describe("Likes should", () => {
 
     expect(likes.Eval(aspect)).toBe(100);
   });
+
+  it("return a copy", () => {
+    let aspect = new Aspect(
+        SexKind.Female,
+        OriginKind.Arabic,
+        EyeColor.Brown,
+        HairColor.Blue,
+        HaircutStyle.Bald,
+        ComplexionKind.Strongman,
+        SpecieKind.Dwarf,
+        140,
+        50);
+
+    let likes = Likes.likesAspect(aspect);
+
+    let copy = likes.copy();
+
+    expect(likes.Eval(aspect)).toBe(copy.Eval(aspect));
+  });
 });
